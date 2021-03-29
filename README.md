@@ -19,4 +19,5 @@ Once the acknowledgement of frame 0 is received the window slides ahead and fram
  Similarly all the frames are sent.
  
  If any of the acknowledgement for particular frame isn't received then all the frames in the current window are send again.
+ 
  <img width="402" alt="s5" src="https://user-images.githubusercontent.com/56835406/112859798-cfde9400-90d0-11eb-873a-f24b2fcb775f.png">
