@@ -36,4 +36,24 @@ Once the acknowledgement of frame 0 is received the window slides ahead and fram
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113106968-f9a6d080-9220-11eb-9f8a-8c22cb60462f.jpg">
  <br/>Server side<br/>
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113106242-2d352b00-9220-11eb-9799-b8d3d537be41.jpg">
+ 
+ <hr/>
+
+# Selective Repeat
+
+* The receiver acknowledges the frame and send the feedback as soon as a new frame is received.
+* The sender after receiving the acknowledgement send the next frame.
+* If the acknowledgement of any of the frame is not received then it resends the selective frame again to the receiver.
+* The window moves ahead as soon as the acknowledgment is received.
+
+# Working
+
+The frames are send just like in the Go-back-n AQR
+
+<img width="403" alt="s3" src="https://user-images.githubusercontent.com/56835406/113185984-b8401080-9274-11eb-8cd2-5c865f93b579.jpg">
+
+If any of the frame have not be acknowledged then only that selective frame is repeated and the process repeats
+
+<img width="403" alt="s3" src="https://user-images.githubusercontent.com/56835406/113186018-bfffb500-9274-11eb-8b37-617e24849f53.jpg">
+
 
