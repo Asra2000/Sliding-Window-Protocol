@@ -33,9 +33,12 @@ public class Sender {
         GoBackNThread currThread = new GoBackNThread(din, winSize);
         currThread.thread.start();
 
+        //sending the window size info to the server
         dout.writeInt(winSize);
         dout.flush();
+        // queue to hold the indexes of the frames whose acknowledgement is awaited
         Queue<Integer> awaitingAck = new LinkedList<>();
+
         int currFrame = 0; int index =0;
         boolean terminate = false;
 
@@ -65,6 +68,8 @@ public class Sender {
                 }
                 currThread.thread.join(4000); // time to receive acknowledgement is set to 4 milli seconds
                 if(currThread.getAckFrame() == -1 || awaitingAck.isEmpty()) break;
+
+                //checking the index of the acknowledgement received
                 if(currThread.getAckFrame() != awaitingAck.peek()){
                     awaitingAck.remove(currThread.getAckFrame());
                     System.out.println("No acknowledgement received after 4 msec sending again.");

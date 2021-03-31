@@ -18,13 +18,22 @@ public class Receiver {
 
         int winSize = din.readInt();
         int intentionalBreak = 2;// for the purpose of testing only
+
+        //acknowledgement queue that holds all the acknowledgement to be send
         Queue<Integer> ackQueue = new LinkedList<>();
+
         int k, data, index = 0;
-        boolean flag = false;
+        boolean flag = false; // this is to ensure that on each reception an acknowledgement is send
+
+        // the main loop
         while (true) {
+            // reading the data send over the server
             k = din.readInt();
             data = din.readInt();
+
+            // k == -1 means that the client has sent all the data therefore terminate
             if (k == -1) {
+                // sending all the remaining acknowledgements
                 while (!ackQueue.isEmpty()) {
                     System.out.println("Sending acknowledgement for frame " + ackQueue.peek());
                     dout.writeInt(ackQueue.poll());
@@ -32,6 +41,7 @@ public class Receiver {
                 }
                 break;
             }
+            // this intentionalBreak has been added for the sake of explanation
             if (k == intentionalBreak) {
                 System.out.println("The frame received is wrong. Not sending acknowledgement for frame " + k);
                 intentionalBreak = -1;
@@ -51,7 +61,9 @@ public class Receiver {
         }
 
         System.out.println("Client has send all the data closing the server");
-        dout.writeInt(-1);
+        dout.writeInt(-1); // sending the exit response
+        dout.flush();
+
         // closing the connection
         din.close();
         dout.close();
