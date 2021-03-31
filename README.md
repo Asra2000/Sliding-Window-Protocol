@@ -79,7 +79,7 @@ If any of the frame have not be acknowledged then only that selective frame is r
 
 <hr/>
 
-# Comparision between the two
+# Comparison between the two
 
 | Go-back-N                           |                           Selective Repeat                             |
 | --------------------------------    | :---------------------------------------------------------------------:|
