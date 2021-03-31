@@ -4,11 +4,15 @@ import java.io.DataInputStream;
 import java.lang.Runnable;
 import java.io.*;
 public class GoBackNThread implements Runnable{
-    Thread thread;
+    public Thread thread;
     DataInputStream dataInputStream;
     int ackFrame; int windowSize;
 
-    GoBackNThread(DataInputStream din, int size){
+    public int getAckFrame(){
+        return ackFrame;
+    }
+
+    public GoBackNThread(DataInputStream din, int size){
         thread = new Thread(this);
         dataInputStream = din;
         windowSize =size;
