@@ -60,7 +60,7 @@ public class Receiver {
             index++;
         }
 
-        System.out.println("Client has send all the data closing the server");
+        System.out.println("Client has sent all the data, closing the server");
         dout.writeInt(-1); // sending the exit response
         dout.flush();
 

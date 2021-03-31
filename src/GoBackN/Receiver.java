@@ -17,7 +17,7 @@ public class Receiver {
         DataOutputStream dout = new DataOutputStream(s.getOutputStream());
 
         int winSize = din.readInt();
-        int intentionalBreak = -1;// for the purpose of testing only
+        int intentionalBreak = 1;// for the purpose of testing only
         int i = 0, ackToSend = 0;
         boolean flag = false;
         int k, data;
@@ -37,8 +37,7 @@ public class Receiver {
             }
             // this intentionalBreak has been added for the sake of explanation
             if (k != i || k == intentionalBreak) {
-                System.out.println("Frame expected= " + i + " Received= " + k);
-                System.out.println("Not sending acknowledgement");
+                System.out.println("Wrong frame received not sending acknowledgement for " + k);
                 i = ackToSend;
                 intentionalBreak = -1;
             } else {
@@ -55,7 +54,7 @@ public class Receiver {
             i++;
         }
 
-        System.out.println("Client has send all the data closing the server");
+        System.out.println("Client has sent all the data, closing the server");
         dout.writeInt(-1);// sending the exit response
         dout.flush();
         // closing the connection
