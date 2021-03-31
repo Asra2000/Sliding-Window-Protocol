@@ -34,6 +34,9 @@ Once the acknowledgement of frame 0 is received the window slides ahead and fram
  <br/>
  Client side<br/>
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113106968-f9a6d080-9220-11eb-9f8a-8c22cb60462f.jpg">
+ 
+ All the frames in the current window are repeated.
+ 
  <br/>Server side<br/>
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113190281-c2b0d900-9279-11eb-9a10-f809804afce1.jpg">
  
@@ -68,5 +71,8 @@ If any of the frame have not be acknowledged then only that selective frame is r
  <br/>
  Client side<br/>
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113189452-d576de00-9278-11eb-90dd-2e7cbd63a4a7.jpg">
+ 
+ It can be noted here that only frame 2 has been repeated and not all the frames in the current window.
+ 
  <br/>Server side<br/>
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113189502-e1fb3680-9278-11eb-87d7-e5f1fcf78c8d.jpg">
