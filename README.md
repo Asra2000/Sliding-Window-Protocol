@@ -28,14 +28,14 @@ Once the acknowledgement of frame 0 is received the window slides ahead and fram
  Client side<br/>
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113107229-4d191e80-9221-11eb-8444-d89c6b3dbb77.jpg">
  <br/>Server side<br/>
- <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113105426-307be700-921f-11eb-83ee-381c20d27996.jpg">
- 
+ <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113190348-d0fef500-9279-11eb-8bbe-8a212891fac5.jpg">
+
  Case 2 : When acknowledgement of any frame not received
  <br/>
  Client side<br/>
  <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113106968-f9a6d080-9220-11eb-9f8a-8c22cb60462f.jpg">
  <br/>Server side<br/>
- <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113106242-2d352b00-9220-11eb-9799-b8d3d537be41.jpg">
+ <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113190281-c2b0d900-9279-11eb-9a10-f809804afce1.jpg">
  
  <hr/>
 
@@ -56,4 +56,17 @@ If any of the frame have not be acknowledged then only that selective frame is r
 
 <img width="403" alt="s3" src="https://user-images.githubusercontent.com/56835406/113186018-bfffb500-9274-11eb-8b37-617e24849f53.jpg">
 
-
+# Progam Output for Selective Repeat ARQ
+ Case 1 : When all frames were acknowledged
+ <br/>
+ Client side<br/>
+ <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113189343-bb3d0000-9278-11eb-885e-6427fb71edd0.jpg">
+ <br/>Server side<br/>
+ <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113189392-c8f28580-9278-11eb-8e4d-f02c02e38da8.jpg">
+ 
+ Case 2 : When acknowledgement of any frame not received
+ <br/>
+ Client side<br/>
+ <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113189452-d576de00-9278-11eb-90dd-2e7cbd63a4a7.jpg">
+ <br/>Server side<br/>
+ <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/113189502-e1fb3680-9278-11eb-87d7-e5f1fcf78c8d.jpg">
