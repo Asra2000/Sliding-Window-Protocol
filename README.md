@@ -13,6 +13,7 @@ Sliding-Window-Protocol
 for the sake of simplicity the frames are numbered sequentially 
 
 <img width="397" alt="s1" src="https://user-images.githubusercontent.com/56835406/112859266-475ff380-90d0-11eb-9594-8a9dfbcf91c2.png">
+
 <img width="406" alt="s2" src="https://user-images.githubusercontent.com/56835406/112859408-6d859380-90d0-11eb-8905-618811cb17ae.png">
 
 Once the acknowledgement of frame 0 is received the window slides ahead and frame 4 is send
