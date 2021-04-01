@@ -1,6 +1,6 @@
 Sliding-Window-Protocol 
 ========================
-*View code here: [Link to code](../../tree/master/src)
+<i>View code here: [Link to code](../../tree/master/src) <i/>
 
 ## Go-Back-N ARQ
 * It uses the concept of protocol pipelining i.e the sender can send multiple frames before receiving the acknowledgement for the first frame.
@@ -45,6 +45,7 @@ Once the acknowledgement of frame 0 is received the window slides ahead and fram
  <hr/>
 
 # Selective Repeat
+<i>View code here: [Link to code](../../tree/master/src) <i/>
 
 * The receiver acknowledges the frame and send the feedback as soon as a new frame is received.
 * The sender after receiving the acknowledgement send the next frame.
