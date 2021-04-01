@@ -86,7 +86,7 @@ If any of the frame have not be acknowledged then only that selective frame is r
 
 | Go-back-N                           |                           Selective Repeat                             |
 | --------------------------------    | :---------------------------------------------------------------------:|
-| In Go-Back-N Protocol, if the sent frame are find suspected then all the frames are re-transmitted from the lost packet to the last packet transmitted.	| In selective Repeat protocol, only those frames are re-transmitted which are found suspected. | 
+| In Go-Back-N Protocol, if the sent frame are not acknowledged then all the frames are re-transmitted from the lost packet to the last packet transmitted.	| In selective Repeat protocol, only those frames are re-transmitted which are not received properly. | 
 |	Sender window size of Go-Back-N Protocol is N.|	Sender window size of selective Repeat protocol is also N.| 
-|Receiver window size of Go-Back-N Protocol is 1.|	Receiver window size of selective Repeat protocol is N. | 
+|Receiver window size is 1.|	Receiver window size is N. | 
 |Go-Back-N Protocol is less complex.	| Selective Repeat protocol is more complex.|
